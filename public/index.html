@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>WME Course Exercise 3 &bull; Skeleton - REST API</title>
+	<meta name="description" content="Skeleton for the third course exercise of Web and Multimedia Engineering">
+	<meta name="author" content="FIXME">
+	<meta name="keywords" content="Web and Multimedia Engineering, Course, Exercise">
+
+	<link href="css/html5reset.css" type="text/css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+
+	<link rel="stylesheet" href="./css/main.css">
+
+    <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+	<div class="">
+		<header>
+			<nav>
+				<ul>
+					<li class="nav-item" id="main-logo">
+						<a>
+							<img src="./img/world_data-logo.svg" alt="">
+						</a>
+					</li>
+					<li class="nav-item">
+						<a>
+							<img src="./img/table.svg" alt="">
+							<span>A1 - Table</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a>
+							<img src="./img/cogs.svg" alt="">
+							<span>A2 - Parse</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a>
+							<img src="./img/save.svg" alt="">
+							<span>A2 - Save</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a>
+							<img src="./img/print.svg" alt="">
+							<span>A2 - Print</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a>
+							<img src="./img/nodejs.svg" alt="">
+							<span>A3 - REST</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a>
+							<img src="./img/map.svg" alt="">
+							<span>A4 - Vis</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a>
+							<img src="./img/cube.svg" alt="">
+							<span>A5 - 3D</span>
+						</a>
+					</li>
+					<li class="nav-item" id="menu">
+						<a>
+							<img src="./img/burger.svg" alt="Menu">
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<h1>Testing our REST API</h1>
+			<div class="rest-interface">
+				<div class="rest-country">
+					<div class="rest-api-block">
+						<h2>Filter Countries</h2>
+						<form name="country_filter" id="country_filter" method="GET">
+							<p>
+								<label for="country_filter_id">country id</label>
+								<input type="text" name="country_filter_id" id="country_filter_id">
+							</p>
+							<p>
+								<label for="country_filter_range">country id range (eg: 2-5)</label>
+								<input type="text" name="country_filter_range" id="country_filter_range">
+							</p>
+							<p class="submit">
+								<input class="green_btn" type="submit" name="submit" id="add_submit" value="Filter Countries">
+							</p>
+						</form>
+					</div>
+				</div>
+				<div class="rest-prop">
+					<div class="rest-api-block">
+						<h2>Properties</h2>
+						<p>
+							<select id="prop_selection">
+							<!--load options via ajax-->
+							</select>
+						</p>
+						<button class="green_btn" id="show_selected_prop">Show</button>
+						<button class="green_btn" id="hide_selected_prop">Hide</button>
+					</div>
+				</div>
+				<div class="rest-add">
+					<div class="rest-api-block">
+						<h2>Add Country</h2>
+						<form name="country_add" id="country_add" method="POST">
+							<p>
+								<label for="country_name">country name</label>
+								<input type="text" name="country_name" id="country_name">
+							</p>
+							<p>
+								<label for="country_birth">birth rate / 1000</label>
+								<input type="number" name="country_birth" id="country_birth">
+							</p>
+							<p>
+								<label for="country_cellphone">cellphones / 100</label>
+								<input type="number" name="country_cellphone" id="country_cellphone">
+							</p>
+							<p class="submit">
+								<input class="green_btn" type="submit" name="submit" id="add_submit" value="Add Country">
+							</p>
+						</form>
+					</div>
+				</div>
+				<div class="rest-delete">
+					<div class="rest-api-block">
+						<h2>Delete Country</h2>
+						<form name="country_delete" id="country_delete" method="DELETE">
+							<p>
+								<label for="country_delete_id">Country ID to delete</label>
+								<input type="text" name="country_delete_id" id="country_delete_id">
+							</p>
+							<p class="submit">
+								<input class="green_btn" type="submit" name="submit" id="rm_submit" value="Remove Country">
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<table class="data__table" id="data-table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+
+		</main>
+
+		<footer>
+			<div class="footer__details--left">
+				<p>Copyright @ 2023 world_data</p>
+				<p>First course exercise
+					<b>HTML, CSS and JS</b>
+					of the lecture Web and Multimedia Engineering
+				</p>
+			</div>
+			<div class="footer__details--right">
+				<p>This solution has been created by:</p>
+				<p>Volodymyr Drobitko</p>
+			</div>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="js/ajax.js"></script>
+
+</body>
+</html>

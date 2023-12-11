@@ -1,0 +1,17 @@
+{
+  "name": "WME_A3_Drobitko_Volodymyr",
+  "version": "1.0.0",
+  "description": "This is the solution for the WME exercise 3 created by Volodymyr Drobitko.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "<YourName>",
+  "license": "",
+  "dependencies": {
+    "body-parser": "1.x",
+    "csvtojson": "2.x",
+    "express": "^4.18.2"
+  }
+}
