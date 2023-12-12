@@ -20,7 +20,33 @@ app.use( express.static( path.join(__dirname, "public") ) );
 ****************************** handle CSV  ********************************
 **************************************************************************/
 
-// your code
+const csvConverterV2 = require('csvtojson')();
+const fs = require('fs');
+const { error } = require('console');
+
+main()
+
+async function main() {
+	async function parseCSV(csvFilePath) {
+		let resultJsonObj;
+		await csvConverterV2.fromFile(csvFilePath).then((jsonObj) => {
+			resultJsonObj =  jsonObj
+		}) 
+		// create a json string and write it to a file
+		fs.writeFile('./world_data.json', JSON.stringify(resultJsonObj), 'utf8', (err) => {
+			if (err) {
+				console.log(error)
+			}
+		});
+		return resultJsonObj
+	}
+	
+	let jsonObj = await parseCSV('./world_data.csv')
+	
+}
+
+
+
 
 /**************************************************************************
 *************************** handle HTTP METHODS ***************************
