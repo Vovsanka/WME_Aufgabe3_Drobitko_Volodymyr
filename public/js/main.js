@@ -1,8 +1,6 @@
-import tableData from "./dataset/dataset.js";
-
 // the global variables fetched from json 
-const headers = tableData.headers
-const dataset = tableData.dataset
+const headers = []
+const dataset = []
 
 // main script
 initBurgerDropdown()
@@ -173,3 +171,5 @@ function toggleNavList() {
         nav.classList.remove('nav-list--show')
     }
 }
+
+/* A3 */

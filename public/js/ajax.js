@@ -1,3 +1,10 @@
-alert("No ajax calls and handlers implemented yet! Check your ajax.js under public/js.");
+$.ajax({
+    type: 'GET',
+    url: "http://localhost:3000/items",
+    async: true,
+    success: (data) => {
+        console.log('table loaded')
+    }, error: (jqXHR, text, err) => {
 
-// your code
+    }
+})
